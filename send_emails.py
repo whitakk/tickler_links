@@ -46,7 +46,7 @@ def get_index_from_length(l):
     weeks_elapsed = (today - base_week).days//7
     weekdays_elapsed = today.weekday() # indexes to 0 = monday
 
-    index = (weeks_elapsed*5 + weekdays_elapsed)
+    index = (weeks_elapsed*5 + weekdays_elapsed + 2) # add offset bc didn't like how original days of week were lining up
 
     return(index%l)
 
